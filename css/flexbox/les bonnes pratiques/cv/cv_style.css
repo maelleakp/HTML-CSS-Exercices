@@ -1,0 +1,78 @@
+body, html {
+    margin:0;
+    padding:0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #e06868;
+    ;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+}
+
+ul {
+    margin-left: 22%;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 9%;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    padding: auto;
+    width: 40%;
+}
+
+aside {
+    width:60%;
+}
+
+figure {
+    padding:0%;
+}
+
+img {
+    width: 80%;
+    margin: 8%;
+}
+
+h2 {
+    color: #e06868;
+    width: 100%;
+}
+
+div {
+    margin: 18%;
+    width:75%;
+}
+
+.description {
+    color:gray;
+}
+
+.plus {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin:0;
+}
+
+.marge {
+    margin-left: 9%;
+}

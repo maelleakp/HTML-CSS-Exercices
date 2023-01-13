@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Un formulaire accessible</title>
+    </head>
+
+    <body>
+
+        <fieldset>
+            <legend>Titre du formulaire</legend>
+                <form action="page.php" method="POST">
+                    <p>
+                        <label for="nom">Votre nom :</label>
+                        <input type="text" id="nom" size="30" placeholder="Écrivez ici" required>
+                    </p>
+
+                    <p>
+                        <label for="prenom">Votre prénom :</label>
+                        <input type="text" id="prenom" size="30" required autofocus>
+                    </p>
+
+                    <p>
+                        <label for="age">Votre âge :</label>
+                        <input type="number" id="age" min="10" max="15" step="1">
+                    </p>
+
+                    <p>
+                        <label for="site">Votre site :</label>
+                        <input type="URL" id="site" placeholder="https://...">
+                    </p>
+
+                    <p>
+                        <label for="mail">Votre mail :</label>
+                        <input type="email" id="mail" required>
+                    </p>
+
+                    <p>
+                        <label for="choix">Votre choix :</label>
+                        <select id="choix">
+
+                            <!-- optgourp permet de structurer les options de la liste déroulante -->
+                            <optgroup label="Liste 1">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </optgroup>
+
+                            <optgroup label="Liste 2">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </optgroup>
+
+                        </select>
+                    </p>
+
+                    <p>
+                        <!-- L'input type date affiche un calendrier -->
+                        <label for="date">Date de naissance :</label>
+                        <input id="date" name="date" type="date">
+                    </p>
+
+                    <p>
+                        <!-- L'input type color affiche un nuancier de couleur -->
+                        <label for="couleur">Votre couleur préférée :</label>
+                        <input id="couleur" name="couleur" type="color">
+                    </p>
+
+                    <p>
+                        <!-- Le choix unique est rendu possible grâce à l'attribut name -->
+                        <label for="genre">Votre genre :</label>
+                        <input type="radio" id="femme" name="genre">Femme
+                        <input type="radio" id="homme" name="genre">Homme
+                        <input type="radio" id="autre" name="genre">Autre
+                    </p>
+
+                    <p>
+                        <label for="animal">Votre animal préféré :</label>
+                        <input type="checkbox" id="chat">Chat
+                        <input type="checkbox" id="chien">Chien
+                        <input type="checkbox" id="t-rex">T-rex
+                    </p>
+
+                    <p>
+                        <label for="numero">Votre numéro :</label>
+                        <input type="tel" pattern="[0-9]{10}" size="10" id="numero">
+                    </p>
+
+                    <p>
+                        <label for="message">Votre message :</label>
+                        <p>
+                            <textarea rows="10" cols="50" placeholder="Tapez votre message" required></textarea>
+                        </p>
+                    </p>
+
+                    <p>
+                        <input type="button" value="Envoyer">
+                        <input type="reset" value="Effacer">
+
+                        <button>Envoyer</button>
+                    </p>
+
+                </form>
+        </fieldset>
+
+    </body>
+</html>

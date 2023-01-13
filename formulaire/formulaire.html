@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Un formulaire accessible</title>
+    </head>
+
+    <body>
+        <fieldset>
+            <!-- Titre du formulaire -->
+            <legend>Informations personnelles</legend>
+
+            <form action="page-de-reception.php" method="POST">
+
+                <p>
+                    <!-- Le label/étiquettes permet de nommer le champ de saisie -->
+                    <label for="nom">Nom</label>
+                    <input id="nom" size="15">
+                </p>
+
+                <p>
+                    <label for="prenom">Prénom</label>
+                    <input id="prenom" size="15">
+                </p>
+                
+                <!-- Création d'une liste déroulante -->
+                <p>
+                    <label for="age">Age</label>
+                        <select id="age"> <!-- La balise select crée la liste déroulante -->
+                            <option>moins de 18</option> <!-- option remplit la liste -->
+                            <option>entre 18 et 25</option>
+                            <option>entre 25 et 50</option>
+                            <option>plus de 50</option>
+                        </select>
+                </p>
+
+                <p>
+                    <span class="name">Occupations :</span>
+                    
+                    <span>
+                        <input type="checkbox" id="sport">
+                        <label for="sport">Sport</label>
+                    </span>
+
+                    <span>
+                        <input type="checkbox" id="musique">
+                        <label for="musique">Musique</label>
+                    </span>
+
+                    <span>
+                        <input type="checkbox" id="web">
+                        <label for="web">Web</label>
+                    </span>
+                </p>
+
+                <p>
+                    <label for="message">Votre message</label>
+                    <textarea id="message" rows="3" cols="15"></textarea>
+                </p>
+
+            </form>
+        </fieldset>
+    </body>
+
+</html>

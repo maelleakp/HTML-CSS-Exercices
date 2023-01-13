@@ -1,0 +1,153 @@
+/* Les styles orientés en mode Flexbox */
+
+/* Organisation générale des Flexbox avec les valeurs de display */
+
+/*
+    row : organisés sur une ligne (par défaut) ;
+    
+    column : organisé sur une colonne ;
+    
+    row-reverse : organisés sur une ligne, mais en ordre inversé ;
+    
+    column-reverse : organisés sur une colonne, mais en ordre inversé.
+*/
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Les retours à la ligne avec les valeurs de flex-wrap */
+/*
+    nowrap : pas de retour à la ligne ;
+    
+    wrap : les éléments vont à la ligne lorsqu'il n'y a plus la place ;
+    
+    wrap-reverse : les éléments vont à la liogne, lorsqu'il n'y a plus la place, en sens inverse. 
+*/
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* La gestion de l'alignement des box avec les valeurs de justify-content */
+/* 
+    flex-start : alignés au début (par défaut) ;
+    
+    flex-end : alignés à la fin ;
+    
+    center : alignés au centre ;
+    
+    space-between : les éléments sont étirés sur tout l'axe (il y a de l'espace entre eux, un peu comme le "padding") ;
+    
+    space-around : idem, les éléments sont étirés sur tout l'axe, mais ils laissent aussi de l'espace sur les extrémités (un peu comme le "margin").
+*/
+
+/* On positionne le parent en mode display:flex */
+div#conteneurParent {
+    display: flex!important;
+
+    /* Ici, on gère l'organisation générale, les retours à la ligne et l'alignement */
+
+    /* flex-direction: row row-reverse column column-reverse ; */
+    /* flex-wrap: wrap nowrap ; */
+    /* justify-content: space-between space-around ; */
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+/* Quelques exemples d'alignement */
+
+/* Le mode vertical "column" est appelé : "axe principal" */
+div#conteneurParent {
+    display: flex ; 
+    flex-direction: column;
+    justify-content: center;
+    height: 350px;
+}
+
+/* Je positionne les blocs HTML en mode Flexbox et en horizontal cette fois ! */
+div#conteneurParent {
+    display: flex;
+    justify-content: center;
+
+    /* Je change l'alignement sur l'axe principal grâce au mode align-items */
+    /* Les valeurs de align-items */
+    /*
+        stretch : les éléments sont étirés sur tout l'axe principal ; 
+        flex-start : alignés au début (comme le baseline) ;
+        flex-end : alignés à la fin ;
+        center : alignés au centre ; 
+        baseline : alignés sur la ligne de base (comme flex-start).
+    */
+    align-items: center;
+}
+
+/* Exemple de centrage vertical et horizontal très simple. Le conteneur-parent est une Flexbox et on pose des marges automatiques sur les enfants. */
+div#conteneurParent {
+    display: flex;
+}
+
+div.elementFlexible {
+    margin: auto;
+    padding: 10px;
+}
+
+/* Répartition sur plusieurs lignes */
+/* Je pose un reotur à la ligne avec flex-wrap */
+div#conteneurParent_2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* Nouvelle commande : align-content */
+    /* Ses valeurs sont les mêmes que "justify-content", sauf qu'on rajoute "stretch" qui positionne dans le coin supérieur gauche de la fenêtre, puis étire les éléments-enfants sur tout l'axe disponible. */
+
+    align-content: /*...*/;
+}
+
+/* On peut changer l'ordre des éléments grâce à la commande "order" */
+/* La pseudo-classe : nth-child() permet de cibler un élément enfant */
+div#conteneurParent {
+    display: flex;
+}
+
+.elementFlexible:nth-child(1){
+    order:3;
+}
+
+.elementFlexible:nth-child(2){
+    order:1;
+}
+
+.elementFlexible:nth-child(3){
+    order:2;
+}
+
+/* Je peux modifier la taille d'un élément par rapport aux autres grâce à la commande flex */
+/* Flex est la combinaison de flex-grow, flex-shrink et flex-basis */
+div#conteneurParent {
+    display: flex;
+}
+.elementFlexible:nth-child(1) {
+    order:3;
+
+    /* J'augmente sa largeur de 2x par rapport au deuxième enfant */
+    flex:2;
+    /* flex-grow: ;
+    flex-shrink: ; */
+}
+
+.elementFlexible:nth-child(2) {
+    order:1;
+    flex:1;
+}
+
+.style_1 {
+    background-color: blue;
+}
+
+.style_2 {
+    background-color: red;
+}
+
+.style_3 {
+    background-color: orange;
+}

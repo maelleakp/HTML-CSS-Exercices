@@ -1,0 +1,44 @@
+div#conteneurParent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.elementFlexible {
+    margin: auto;
+    width: 240px;
+    margin-top: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.style_1 {
+    background-color: purple;
+}
+
+.style_2 {
+    background-color: red;
+}
+🇦
+.style_3 {
+    background-color: orange;
+}
+
+.style_4 {
+    background-color: yellow;
+}
+
+.style_5 {
+    background-color: green;
+}
+
+.style_6 {
+    background-color: brown;
+}
+
+.style_7 {
+    background-color: grey;
+}
+
+.style_8 {
+    background-color: blue;
+}

@@ -1,0 +1,60 @@
+body, html {
+    width:80%;
+    margin:auto;
+    padding:0;
+    border:0;
+    font-size:20px;
+    background-color:black;
+    text-align:center;
+    color:white;
+}
+
+h1 {
+    color:red;
+}
+
+h2 {
+    color:white;
+    padding-bottom:40px;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
+
+ul {
+    display:flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid white;
+    text-align:left;
+    padding:20px;
+}
+
+th {
+    border: 1px solid white;
+    text-align:center;
+}
+
+p {
+    margin:0;
+}
+
+#toutPublic {
+    background-color:pink;
+}

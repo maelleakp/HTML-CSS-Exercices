@@ -1,0 +1,44 @@
+/* * * * * * * * * * * */
+/* Feuille de style */
+/* * * * * * * * * * * */
+
+/* Syntaxe CSS */
+
+body, html {
+    margin:0; /* Marge extérieure de l'élément HTML */
+    padding:0; /* Marge interne de l'élément HTML */
+    border:0; /* Type de bordure */
+    background-color:#E6E6FA; /* Fond de couleur */
+    font-size:24px;
+    color:black;
+    text-align:left;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+h1, h2 {
+    text-align:center;
+}
+
+/* pseudo-classe, aspect du lien au survol de la souris */
+a:hover {
+    color:#FF00FF;
+}
+
+/* active : aspect du lien au clic */
+a:active{
+    color:#FF4500;
+}
+
+/* aspect du lien lorsqu'il a déjà été cliqué */
+a:visited{
+    color:#3CB371;
+}
+
+/* aspect du lien */
+a:focus{
+    color:#AFEEEE;
+}
+
+h2 + p {
+    padding:20px;
+}

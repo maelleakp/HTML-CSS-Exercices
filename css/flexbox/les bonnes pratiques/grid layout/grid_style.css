@@ -1,0 +1,88 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Les modes de positionnement en "Grid Layout" - CSS3 */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+body {
+    display: grid !important;
+    color: white;
+
+    /* On découpe la grille, la colonne de gauche sera plus grande (bloc article en HTML) */
+    /* "fr" : fraction d'espace disponible, on peut l'exprimer aussi en px */
+    /* Les propriétés "grid-template-colums- et "grid-template-rows" définissent des colonnes et des rangées */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: /* * */;
+
+    /* Toutes les futures lignes feront au moins 100px de hauteur et occuperont toute la largeur disponible en "auto" */
+    grid-auto-rows: minmax(100px, auto); /* 100px : hauteur, auto : largeur */
+
+    /* Création de gouttières "gap", une marge entre les cellules */
+    grid-column-gap: 5px;
+    grid-row-gap: 0.5em;
+}
+
+/* On construit les grilles avec les paramètres lignes et colonnes */
+/* Le paramètre "grid-row" permet de définir la position du bloc */
+/* Le paramètre "grid-column" permet d'indiquer le nombre de colonnes occupées par un bloc */
+header {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    margin: 10px;
+    padding: 10px;
+    background: black;
+    color:white;
+}
+
+nav {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    margin: 10px;
+    padding: 10px;
+    background: black;
+    color: white;
+}
+
+article {
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+aside {
+    margin: 10px;
+    padding: 10px;
+    background-color: yellow;
+    color: black;
+}
+
+div {
+    display: none;
+}
+
+footer {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    margin: 10px;
+    padding: 10px;
+    background: grey;
+
+}
+
+@media screen and (max-width:560px) {
+    
+    article, aside, div {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: red;
+    }
+
+    div {
+        display: block;
+    }
+}

@@ -1,0 +1,123 @@
+body, html {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% viewport height (hauteur du support de vue) */
+    overflow: hidden; /* défilement / scroll des éléments */
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+header {
+    flex: 1; /* taille en largeur de l'élément HTML positionné en flexbox */
+    background-color: hotpink;
+    text-align: center;
+    line-height: 100px;
+}
+
+section {
+    display: flex;
+    flex-direction: row !important;
+}
+
+nav {
+    flex: 0.2;
+    background-color: orange;
+}
+
+article#gauche {
+    flex: 1;
+    background-color: palegreen ;
+}
+
+article#droite {
+    flex: 0.6;
+    background-color: royalblue;
+}
+
+div#colonne1 {
+    flex-direction: column;
+    background-color: red;
+	padding:20px;
+}
+
+aside {
+	flex: 0.2;
+	background-color: Peru;
+}
+
+footer {
+	flex: 1;
+	background-color: HotPink;
+	text-align: center;
+	line-height: 200px;
+}
+
+/* Début finitions, marges homogènes, textes etc. */
+header, nav, article, aside, footer {
+	margin: 5px;
+}
+
+p {
+	text-align: justify;
+	padding: 10px;
+}
+/* Fin finitions */
+
+button {
+	border:0;
+	background-color:white;
+	border-radius:5px;
+	border-bottom:2px solid black;
+	padding:10px;
+	width:120px;
+}
+
+
+ /* * * 
+
+        Du responsive en media query 
+
+* * * */
+
+
+@media screen and (largeur maximum ou hauteur maximum, point de rupture) {
+    blocHTML{
+        /* . . . */
+    }
+}
+
+@media screen and (largeur minimum ou hauteur minimum, point de rupture) {
+    blocHTML{
+        /* . . . */
+    }
+}
+
+@media screen and (max-width:560px) {
+
+    body, html {
+        overflow: auto;
+    }
+
+    section {
+        flex: 1;
+        flex-direction: column !important;
+        overflow: hidden !important;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        order: -2;
+    }
+
+    footer {
+        order: -1; /* Ordre de positionnement du bloc HTML en flexbox */
+        background-color: #000;
+        color: #fff;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+    }
+}

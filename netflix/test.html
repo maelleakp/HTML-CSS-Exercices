@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Les séries Netflix en table HTML5</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>Mes séries Netflix</h1>
+        <h2>Une courte liste de mes séries préférées</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">GENRES</a></li>
+            <li><a href="#">TENDANCES</a></li>
+            <li><a href="#">ANNÉE DE SORTIE</a></li>
+            <li><a href="#">BANDE-ANNONCES</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <table>
+            <caption>Liste des séries</caption> <!-- En-tête de la table -->
+            <thead>
+                <tr>
+                    <th>Affiches</th>
+                    <th>Titres</th>
+                    <th>Genres</th>
+                    <th>Résumé</th>
+                    <th>Date de sortie</th>
+                    <th>Enfants ?</th>
+                    <th>Adultes ?</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td><img src="./walkingdead.jpeg" alt="image du film" title="Photo de The Walking Dead" /></td>
+                <td>The Walking Dead</td>
+                <td>Horreur/Survivor</td>
+                <td>Suite à un terrible virus, les morts se transforment et attaquent les vivants, contraints de lutter pour leur survie.</td>
+                <td>2018</td>
+                <td>Non</td>
+                <td>Oui</td>
+            </tr>
+
+            <tr>
+                <td><img src="./bettercallsaul.jpeg" alt="image du film" title="Photo de Better Call Saul" /></td>
+                <td>Better Call Saul</td>
+                <td>Contenu</td>
+                <td>Contenu</td>
+                <td>Contenu</td>
+                <td>Non</td>
+                <td>Oui</td>
+            </tr>
+
+            <tr>
+                <td><img src="./blackmirror.jpeg" alt="image du film" title="Photo de Black Mirror" /></td>
+                <td>Black Mirror</td>
+                <td>Contenu</td>
+                <td>Contenu</td>
+                <td>Contenu</td>
+                <td>Non</td>
+                <td>Oui</td>
+            </tr>
+
+            <tr>
+                <td><img src="./breakingbad.jpeg" alt="image du film" title="Photo de Breaking Bad" /></td>
+                <td>Breaking Bad</td>
+                <td>Contenu</td>
+                <td>Contenu</td>
+                <td>Contenu</td>
+                <td>Non</td>
+                <td>Oui</td>
+            </tr>
+
+            <tr>
+                <td><img src="./demonslayer.jpeg" alt="image du film" title="Photo de Demon Slayer" /></td>
+                <td>Demon Slayer</td>
+                <td>Contenu</td>
+                <td>Contenu</td>
+                <td>2022</td>
+                <td colspan="2" id="toutPublic">Tout public</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <footer></footer>
+    
+</body>
+</html>

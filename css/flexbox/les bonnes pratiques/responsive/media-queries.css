@@ -1,0 +1,27 @@
+/* Fenêtres inférieures */
+@media screen and (max-width:1024px) {
+    section#global {
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        height: auto;
+        min-height: auto;
+        background-color: lightcoral;
+    }
+}
+
+/* Résolution inférieures */
+@media screen and (min-width:1024px) {
+    section#global {
+        position: absolute;
+        width: 960px;
+        left: 50%;
+        margin-left: -480px;
+        background-color: greys;
+    }
+
+    /* article p {
+        width: 50%;
+        margin: auto;
+    } */
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulaire de niveau 3</title>
+        <link rel="stylesheet" href="./css/exstyle.css" type="text/css" media="screen">
+    </head>
+
+    <body>
+        <section id="global">
+	
+            <form action="pages/traitement_du_formulaire.php" method="post" name="mon_formulaire">
+            
+                <fieldset>
+                
+                    <legend>Données personnelles</legend>
+                    <div>			
+                        <!-- L'attribut "name" est destiné à être lu par le navigateur -->
+                        <!-- L'attribut "id" est destiné à être lu par le script PHP -->
+                        <span class="name">Civilité</span>
+                        
+                        <input type="radio" id="civilite_mr" name="civilite">			
+                        <label for="civilite_mr" name="civilite_mr">M.</label>
+                        
+                        <input type="radio" id="civilite_mme" name="civilite">				
+                        <label for="civilite_mme" name="civilite_mme">Mme.</label>			
+                    </div>
+                    
+                    <div>								
+                        <label for="nom">Nom</label>					
+                        <input type="text" id="nom" name="nom" maxlength="20">									
+                    </div>
+                    
+                    <div>								
+                        <label for="prenom">Prénom</label>					
+                        <input type="text" id="prenom" name="prenom">									
+                    </div>
+                    
+                    <div>
+                        <label for="age">Âge</label>
+                        <select id="age" name="age">
+                            <option selected>moins de 18</option>
+                            <option>18-25</option>
+                            <option>25-50</option>
+                            <option>Plus de 50</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <span class="name">Occupations</span>
+                        
+                        <input type="checkbox" id="sport">
+                        <label for="sport" name="sport">Sport</label>
+                        
+                        <input type="checkbox" id="musique">
+                        <label for="musique" name="musique">Musique</label>
+                        
+                        <input type="checkbox" id="informatique">
+                        <label for="informatique" name="informatique">Informatique</label>
+                    </div>
+                
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Adresse de contact</legend>
+                    <div>
+                        <label for="adresse">Adresse</label>
+                        <textarea id="adresse" name="adresse" rows="3" cols="15"></textarea>
+                    </div>
+                    
+                    <div>
+                        <label for="pays">Pays</label>
+                        <input type="text" id="pays" name="pays">
+                    </div>
+                    
+                    <div>
+                        <label for="telephone">Tél.</label>
+                        <input type="text" id="telephone" name="telephone">
+                    </div>
+                
+                </fieldset>
+            
+                <input type="reset" value="Effacer" name="reset" id="reset">
+                <input type="submit" value="Envoyer" name="envoyer" id="envoyer">
+            
+            </form>
+        
+        </section>
+    </body>
+
+</html>

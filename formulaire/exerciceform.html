@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulaire de niveau 4</title>
+        <link rel="stylesheet" href="./css/formstyle.css" type="text/css" media="screen">
+    </head>
+
+    <body>
+        <section id="global">
+
+            <form action="#" method="POST" name="formulaire">
+
+                <fieldset>
+
+                    <legend>Inscription à la newsletter</legend>
+
+                    <!-- Ici, des liens-ancres qui contrôlent l'ouverture et la fermeture des informations cachées plus bas -->
+                    <div class="afficher">
+                        <a href="#informations_complementaires">Informations complémentaires</a>
+                    </div> <!-- Ouvre le panneau d'informations cachées -->
+
+                    <div class="masquer">
+                        <a href="#">Fermer</a>
+                    </div> <!-- Ferme les informations cachées une fois affichées -->
+                    <!-- Fin liens-ancres -->
+
+                    <!-- Début champ formiulaire -->
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="mail" name="email">
+                    </div>
+
+                </fieldset>
+
+                <!-- Informations cachées à l'utilisateur au chargement de la page -->
+                <fieldset id="informations_complementaires">
+
+                    <legend>Informations complémentaires</legend>
+
+                    <div>
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" maxlength="32">
+                    </div>
+
+                    <div>
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom">
+                    </div>
+
+                    <div>
+                        <label for="pays">Pays</label>
+                        <select id="pays" name="pays" required>
+                            <option value="1" selected>France</option>
+                            <option value="2">Belgique</option>
+                            <option value="3">Espagne</option>
+                            <option value="4">Portugal</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="telephone">Tél</label>
+                        <input type="tel" pattern="[0-9]{10}" maxlength="10" id="telephone">
+                    </div>
+
+                </fieldset>
+                <!-- Fermeture des informations cachées -->
+
+                <input type="submit" value="JE M'INSCRIS" name="inscription" id="inscription">
+
+            </form>
+
+        </section>
+        
+    </body>
+</html>

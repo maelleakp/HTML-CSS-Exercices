@@ -1,0 +1,164 @@
+body, html {
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: #efefef; /* Code hexadécimal bleu clair */
+}
+  
+/* Cette méthode permet de centrer la balise ancêtre "section" parfaitement sur n'importe uel écran */
+section#global {
+    position: absolute;
+    width:960px;
+    left:50%;
+    margin-left: -480px;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+/* On cible les liens par défaut et les liens déjà visités */
+a:link, a:visited {
+    color:#30c0ff; /* Code hexadécimal: bleu clair */
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+form {
+    float:left; /* élément "flottant", le formulaire est positionné à gauche */
+    width:370px;
+    margin:10px;
+    padding:10px;
+    padding-bottom: 20px;
+    color:#666;
+    background-color: #efefef;
+}
+
+fieldset{
+    border:none;
+    padding: 20px;
+}
+
+legend {
+    padding-left: 1em; /* em : unité de mesure "fluide" : px, em, rem, % */
+    padding-right: 1em;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    color:#333;
+    border-bottom: 1px solid #333;
+}
+
+ /* On cible les enfants de la balise form : les div */
+form div {
+    margin-bottom: 10px;
+    padding: 5px 10px; /* Commande simplifiée : top, left, bottom, right */
+}
+
+label {
+    display: inline-block; /* Cette commande permet d'aligner les labels avec leurs inputs */
+    line-height: 25px; /* Espacement entre les lignes */
+    width:70px; /* Important ! J'applique une largeur fixe pour un meilleur effet */
+    padding-right: 10px;
+    text-align: right;
+    font-weight: 400;
+    color: #fff;
+
+    border-radius: 15px; /* On arrondit les angles du bloc HTML */
+    border-top-right-radius: 0px; /* On annule le border-radius sur les coins droits du bloc */
+    border-bottom-right-radius: 0px;
+
+    background-color: #595959; /* J'applique un fond de couleur noire par défaut */
+
+    background: -moz-linear-gradient(top,#000,#595959); /* J'utilise le préfixe navigateur pour appliuer le dégadré linéaire - Mozzila (position de départ, couleurDébut, couleurFin) */
+    background: -webkit-linear-gradient(top,#000,#595959); /* Chrome - Safari */
+    background: -ms-linear-gradient(top,#000,#595959); /* Microsoft */
+    background: -o-linear-gradient(top,#000,#595959); /* Opera */
+}
+
+/* On cible les inputs et leurs types correspondants */
+input[type=text], input[type=tel], input[type=email],select{
+    width : 200px;
+    height: 25px;
+    padding-left: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    border: 1px solid #BEBEBE;
+}
+
+input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus {
+    border-color: #30c0ff;
+    outline:none;
+}
+
+form div:hover label {
+    color: #30c0ff;
+}
+
+input[type=submit] {
+    margin-left:120px;
+    padding: 2px 20px;
+    color: #fff;
+    cursor: pointer; /* ou "crosshair", aspect du curseur */
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    /* background-color: #595959; */ /* à activer si les dégradés ne fonctionnent pas */
+    background: -moz-linear-gradient(top,#000,#595959);
+    background: -webkit-linear-gradient(top,#000,#595959);
+    background: -ms-linear-gradient(top,#000,#595959);
+    background: -o-linear-gradient(top,#000,#595959);
+
+    border: 1px solid #124860;
+    border-radius: 15px;
+}
+
+input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
+    /* background-color: #1088ff; */
+    background: -moz-linear-gradient(top, #1088ff, #0677ff);
+    background: -webkit-linear-gradient(top,#1088ff, #0677ff);
+    background: -ms-linear-gradient(top,#1088ff, #0677ff);
+    background: -o-linear-gradient(top,#1088ff, #0677ff);
+    text-decoration: none;
+}
+
+/* Code d'ouverture et fermeture de sinformations complémentaires */
+/* On commence par masuer les informations legend et div */
+#informations_complementaires legend, #informations_complementaires div {
+    display: none;
+}
+
+/* Le bouton proposant l'affichage visible par défaut, l'autre non */
+#informations_complementaires .afficher {
+    display: block;
+}
+#informations_complementaires .masquer {
+    display: none;
+}
+
+/* Lorsque le fieldset informations_complementaires est ciblé, .afficher doit disparaître */
+#informations_complementaires:target .afficher {
+    display: none;
+}
+
+/* Lorsque le fieldset informations_complementaires est ciblé, .masquer doit apparaître */
+#informations_complementaires:target .masquer {
+    display: block;
+}
+
+
+/* Lorsque le fieldset informations_complementaires est ciblé, legend et div doivent apparaître */
+#informations_complementaires:target legend, #informations_complementaires:target div {
+    display: block;
+}
